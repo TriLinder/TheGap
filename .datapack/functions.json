@@ -1,1 +1,1 @@
-{"game":{"$func":["load"]}}
+{"game":{"$func":["assign_block","destroy_block","build_base","assign_block","load"]}}
