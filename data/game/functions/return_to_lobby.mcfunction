@@ -8,3 +8,6 @@ execute as @e[tag=block] run kill @s
 effect clear @a
 tp @a 2048 83 0
 gamemode adventure @a
+
+tag @a remove winner
+tag @a remove loser

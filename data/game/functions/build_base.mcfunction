@@ -1,5 +1,7 @@
 execute as @e[tag=center] at @s run function game:destroy_block
 
+scoreboard players set centerZ game 0
+
 #RED
 setblock 1 65 -6 minecraft:red_concrete
 summon minecraft:marker 1 65 -6 {"Tags":["block", "center", "base"]}

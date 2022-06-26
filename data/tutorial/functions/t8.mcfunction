@@ -1,0 +1,1 @@
+tp @e[tag=tutorialCamera] 20 56 -9.3 140 0

@@ -26,3 +26,5 @@ team modify blue deathMessageVisibility never
 scoreboard objectives add kills playerKillCount
 
 scoreboard objectives add playerY dummy
+
+scoreboard objectives add tutorial dummy
