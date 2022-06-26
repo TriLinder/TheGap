@@ -4,6 +4,7 @@ gamemode spectator @a
 
 summon minecraft:marker 0 64 0 {Marker:1b, Tags:["tutorialCamera"]}
 tp @e[tag=tutorialCamera] 47 69 63 141.6 10.6
+tp @a 0 154 0
 
 scoreboard players set wallsDistance game 42
 
