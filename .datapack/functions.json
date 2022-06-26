@@ -1,1 +1,1 @@
-{"game":{"$func":["game_tick","move_north","raycast_start","raycast_loop","destroy_block","build_base","kill","game_tick","standing_check","assign_block","load","move_south","build_block","tick"]}}
+{"game":{"$func":["destory_walls","tick","move_north","raycast_start","raycast_loop","destroy_block","build_base","kill","game_tick","build_walls","destory_walls","standing_check","assign_block","load","move_south","walls_teleport","build_block"]}}
