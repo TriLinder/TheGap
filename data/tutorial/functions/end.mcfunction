@@ -14,3 +14,6 @@ kill @e[type=item]
 title @a times 20 100 20
 title @a subtitle ""
 title @a title ""
+
+tp @a 2048 83 0
+gamemode adventure @a

@@ -1,4 +1,5 @@
 effect give @a minecraft:slowness 1000000 255 true
+effect give @a minecraft:blindness 1000000 255 true
 gamemode spectator @a
 
 summon minecraft:marker 0 64 0 {Marker:1b, Tags:["tutorialCamera"]}
@@ -13,7 +14,9 @@ function game:build_walls
 
 kill @e[tag=wall]
 
-scoreboard players set $timer tutorial 0
+#scoreboard players set $timer tutorial 0
+schedule function tutorial:start_timer 3s
+
 
 scoreboard players set 20 tutorial 20
 scoreboard players set 10 tutorial 10
