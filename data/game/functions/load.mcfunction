@@ -1,10 +1,14 @@
 tellraw @a "Loaded!"
 
+gamerule keepInventory true
+
 scoreboard objectives add block dummy
 scoreboard objectives add game dummy
 
 scoreboard objectives add placedRedWool minecraft.used:minecraft.red_wool
 scoreboard objectives add placedBlueWool minecraft.used:minecraft.blue_wool
+
+scoreboard objectives add goldBlocksMined minecraft.mined:minecraft.gold_block
 
 scoreboard objectives add standing dummy
 
