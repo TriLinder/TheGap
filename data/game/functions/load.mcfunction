@@ -15,3 +15,10 @@ team add blue "Blue"
 
 team modify red color red
 team modify blue color blue
+
+team modify red deathMessageVisibility never
+team modify blue deathMessageVisibility never
+
+scoreboard objectives add kills playerKillCount
+
+scoreboard objectives add y dummy

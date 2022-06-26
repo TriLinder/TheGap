@@ -8,4 +8,6 @@ execute as @e[type=!marker, tag=!raycast] at @s if score @s standing matches 1 r
 execute as @e[tag=block] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air
 execute as @e[tag=block] at @s run tp @s ~ ~ ~1
 
+scoreboard players add centerZ game 1
+
 execute as @e[tag=block] at @s run function game:build_block
