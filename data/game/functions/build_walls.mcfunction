@@ -1,9 +1,15 @@
 kill @e[tag=wall]
 
-#Teleport
+#Set border
+scoreboard players set wallsDistanceTemp game 1
+scoreboard players operation border game = wallsDistance game
+scoreboard players operation border game -= wallsDistanceTemp game
+
+#Summon
 summon minecraft:armor_stand 0 64 1 {Marker:1b, Tags:["south_wall", "wall"], Invisible:1b}
 summon minecraft:armor_stand 0 64 -1 {Marker:1b, Tags:["north_wall", "wall"], Invisible:1b}
 
+#Teleport
 scoreboard players operation wallsDistanceTemp game = wallsDistance game
 
 function game:walls_teleport
