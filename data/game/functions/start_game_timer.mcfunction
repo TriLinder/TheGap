@@ -12,7 +12,7 @@ title @a title ""
 gamemode adventure @a
 effect clear @a
 
-tp @a[team=red] 0 66 -3 0 0
-tp @a[team=blue] 0 66 3 180 0
+tp @a[team=red] 0 67 -3 0 0
+tp @a[team=blue] 0 67 3 180 0
 
 scoreboard players set $countdown game 100

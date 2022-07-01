@@ -3,6 +3,12 @@ tellraw @a "Loaded!"
 gamerule keepInventory true
 
 worldborder center 0 0
+worldborder warning distance 0
+worldborder warning time 0
+worldborder damage amount 99999999
+worldborder damage buffer 3
+
+execute if score $inLobby lobby matches 1 run worldborder set 10000
 
 scoreboard objectives add block dummy
 scoreboard objectives add game dummy

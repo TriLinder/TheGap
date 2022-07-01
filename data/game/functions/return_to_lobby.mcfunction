@@ -7,6 +7,7 @@ execute as @e[tag=block] run function game:destroy_block
 
 effect clear @a
 
+worldborder set 10000
 scoreboard players set $inLobby lobby 1
 
 tp @a 2048 83 0
