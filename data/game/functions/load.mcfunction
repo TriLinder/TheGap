@@ -1,12 +1,13 @@
 tellraw @a "Loaded!"
 
 gamerule keepInventory true
+gamerule spawnRadius 0
 
 worldborder center 0 0
 worldborder warning distance 0
 worldborder warning time 0
-worldborder damage amount 99999999
-worldborder damage buffer 3
+worldborder damage amount 0
+worldborder damage buffer 99999
 
 execute if score $inLobby lobby matches 1 run worldborder set 10000
 
@@ -35,6 +36,7 @@ team modify red friendlyFire false
 team modify blue friendlyFire false
 
 scoreboard objectives add kills playerKillCount
+scoreboard objectives add deaths deathCount
 
 scoreboard objectives add playerY dummy
 scoreboard objectives add playerZ dummy

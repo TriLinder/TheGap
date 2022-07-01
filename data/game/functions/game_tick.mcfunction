@@ -5,10 +5,14 @@ execute as @a[scores={placedBlueWool=1..}] at @s run function game:raycast_start
 scoreboard players set @a placedRedWool 0
 scoreboard players set @a placedBlueWool 0
 
+#Respawn
+execute as @a[scores={deaths=1..}] at @s run function game:respawn
+scoreboard players set @a deaths 0
+
 #Detect player falling in void
-execute as @a[nbt={OnGround:0b}] store result score @s playerY run data get entity @s Pos[1]
+execute as @a store result score @s playerY run data get entity @s Pos[1]
 execute as @a[scores={playerY=..30}] run kill @s
-#scoreboard players set @a[scores={y=..30}] playerY 255
+scoreboard players set @a[scores={y=..30}] playerY 255
 
 #Detect kill
 execute as @a[scores={kills=1..}] at @s run function game:kill

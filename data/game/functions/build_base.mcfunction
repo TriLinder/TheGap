@@ -206,7 +206,7 @@ summon minecraft:marker 0 64 6 {"Tags":["block", "center", "base"]}
 setblock 1 64 0 minecraft:white_concrete
 summon minecraft:marker 1 64 0 {"Tags":["block", "center", "base"]}
 setblock 0 64 0 minecraft:white_concrete
-summon minecraft:marker 0 64 0 {"Tags":["block", "center", "base"]}
+summon minecraft:marker 0 64 0 {"Tags":["block", "center", "base", "completeCenter"]}
 setblock -1 64 0 minecraft:white_concrete
 summon minecraft:marker -1 64 0 {"Tags":["block", "center", "base"]}
 
