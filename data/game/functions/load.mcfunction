@@ -29,6 +29,7 @@ team modify blue friendlyFire false
 scoreboard objectives add kills playerKillCount
 
 scoreboard objectives add playerY dummy
+scoreboard objectives add playerZ dummy
 scoreboard objectives add blockZ dummy
 
 scoreboard objectives add tutorial dummy

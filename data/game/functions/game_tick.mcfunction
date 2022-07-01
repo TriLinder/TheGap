@@ -15,5 +15,6 @@ execute as @a[scores={kills=1..}] at @s run function game:kill
 scoreboard players set @a kills 0
 
 #Detect victory
-execute if entity @a[scores={goldBlocksMined=1..}, team=red] run function game:red_won
-execute if entity @a[scores={goldBlocksMined=1..}, team=blue] run function game:blue_won
+execute as @a[scores={goldBlocksMined=1..}] store result score @s playerZ run data get entity @s Pos[2]
+execute if entity @a[scores={goldBlocksMined=1.., playerZ=1..}] run function game:red_won
+execute if entity @a[scores={goldBlocksMined=1.., playerZ=..-1}] run function game:blue_won

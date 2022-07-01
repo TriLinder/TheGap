@@ -9,5 +9,7 @@ effect clear @a
 tp @a 2048 83 0
 gamemode adventure @a
 
+clear @a
+
 tag @a remove winner
 tag @a remove loser
