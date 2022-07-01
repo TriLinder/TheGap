@@ -15,3 +15,7 @@ execute if block ~ ~ ~ minecraft:red_concrete run scoreboard players set @s bloc
 execute if block ~ ~ ~ minecraft:blue_concrete run scoreboard players set @s block 2
 execute if block ~ ~ ~ minecraft:red_wool run scoreboard players set @s block 3
 execute if block ~ ~ ~ minecraft:blue_wool run scoreboard players set @s block 4
+
+#Destroy block if inside walls
+function game:blocks_from_border
+execute if score @s blocksFromBorder matches ..-2 run function game:destroy_block 
