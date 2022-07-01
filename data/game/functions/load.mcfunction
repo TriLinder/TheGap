@@ -23,6 +23,9 @@ team modify blue color blue
 team modify red deathMessageVisibility never
 team modify blue deathMessageVisibility never
 
+team modify red friendlyFire false
+team modify blue friendlyFire false
+
 scoreboard objectives add kills playerKillCount
 
 scoreboard objectives add playerY dummy
