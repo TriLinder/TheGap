@@ -2,6 +2,8 @@ tellraw @a "Loaded!"
 
 gamerule keepInventory true
 
+worldborder center 0 0
+
 scoreboard objectives add block dummy
 scoreboard objectives add game dummy
 
@@ -41,3 +43,10 @@ scoreboard objectives add flipBlocks dummy
 
 scoreboard objectives add hasJoined dummy
 scoreboard objectives add gamesLeft minecraft.custom:minecraft.leave_game
+
+scoreboard objectives add lobby dummy
+
+scoreboard objectives add startSignClick trigger
+scoreboard objectives add startTutorial trigger
+scoreboard objectives add lobbyWallsPlus trigger
+scoreboard objectives add lobbyWallsMinus trigger

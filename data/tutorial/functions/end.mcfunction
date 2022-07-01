@@ -17,3 +17,5 @@ title @a title ""
 
 tp @a 2048 83 0
 gamemode adventure @a
+
+scoreboard players set $inLobby lobby 1

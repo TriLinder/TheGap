@@ -8,6 +8,7 @@ execute as @a[tag=loser] at @s run playsound minecraft:block.anvil.place master 
 effect give @a[tag=winner] minecraft:glowing 1000000 255 true
 
 effect give @a minecraft:regeneration 100000 255 true
+effect give @a minecraft:resistance 100000 255 true
 
 kill @e[type=item]
 clear @a
