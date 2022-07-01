@@ -34,3 +34,6 @@ scoreboard objectives add blocksFromBorder dummy
 scoreboard objectives add blockPositiveNegative dummy
 
 scoreboard objectives add flipBlocks dummy
+
+scoreboard objectives add hasJoined dummy
+scoreboard objectives add gamesLeft minecraft.custom:minecraft.leave_game

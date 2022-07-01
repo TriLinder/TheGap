@@ -1,5 +1,6 @@
-execute if score $inProgress game matches 1 run function game:game_tick
+function lobby:join_detector
 
+execute if score $inProgress game matches 1 run function game:game_tick
 execute if score $timer tutorial matches 0.. run function tutorial:tick
 
 execute if score $gameOverTime game matches 0.. run scoreboard players add $gameOverTime game 1
