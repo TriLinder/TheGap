@@ -1,0 +1,1 @@
+give @s minecraft:ender_eye{display:{Name:'{"text":"Flip!", "color":"aqua", "bold":true, "italic":false}', Lore:['{"text":"Flips the structure.", "italic":false}']}} 1
