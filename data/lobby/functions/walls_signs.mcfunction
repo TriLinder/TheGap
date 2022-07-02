@@ -14,11 +14,13 @@ execute if entity @a[scores={lobbyWallsPlus=1..}] run scoreboard players add lob
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=miniwallsRedWall] at @s run tp @s ~-0.025 ~ ~
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=miniwallsBlueWall] at @s run tp @s ~0.025 ~ ~ 
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a ~ ~ ~ 1 2 1
+execute if entity @a[scores={lobbyWallsPlus=1..}] as @a run trigger lobbyWallsPlus set 0
 
 execute if entity @a[scores={lobbyWallsMinus=1..}] run scoreboard players remove lobbyWallsDistance lobby 1
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsRedWall] at @s run tp @s ~0.025 ~ ~
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsBlueWall] at @s run tp @s ~-0.025 ~ ~
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a ~ ~ ~ 1 2 1
+execute if entity @a[scores={lobbyWallsMinus=1..}] as @a run trigger lobbyWallsMinus set 0
 
 tellraw @a[scores={lobbyWalls42=1..}, tag=!42] {"text":"???","color":"aqua"}
 tag @a[scores={lobbyWalls42=1..}, tag=!42] add 42

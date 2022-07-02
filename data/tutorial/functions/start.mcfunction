@@ -21,7 +21,7 @@ function game:build_walls
 
 kill @e[tag=wall]
 
-#scoreboard players set $timer tutorial 0
+scoreboard players set $timer tutorial -2
 schedule function tutorial:start_timer 3s
 
 
