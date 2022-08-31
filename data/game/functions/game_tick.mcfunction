@@ -6,6 +6,8 @@ scoreboard players set @a placedRedWool 0
 scoreboard players set @a placedBlueWool 0
 
 #Respawn
+execute as @a[scores={deaths=1..}] run scoreboard players set @s killStreak 0
+execute as @a[scores={deaths=1..}] run xp set @s 0 levels
 execute as @a[scores={deaths=1..}, nbt={OnGround:1b}] at @s run function game:respawn
 
 #Detect player falling in void
