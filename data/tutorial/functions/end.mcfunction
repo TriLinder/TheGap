@@ -11,11 +11,15 @@ fill -21 75 43 21 53 47 air
 kill @e[tag=tutorialCamera]
 kill @e[type=item]
 
+kill @e[tag=42dolphin]
+
 title @a times 20 100 20
 title @a subtitle ""
 title @a title ""
 
 tp @a 2048 83 0
 gamemode adventure @a
+
+tag @a remove 42
 
 scoreboard players set $inLobby lobby 1

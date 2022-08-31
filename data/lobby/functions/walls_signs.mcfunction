@@ -22,7 +22,7 @@ execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsBlueWall] 
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a ~ ~ ~ 1 2 1
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @a run trigger lobbyWallsMinus set 0
 
-tellraw @a[scores={lobbyWalls42=1..}, tag=!42] {"text":"???","color":"aqua"}
+tellraw @a[scores={lobbyWalls42=1..}, tag=!42] {"text":"???","color":"gray"}
 tag @a[scores={lobbyWalls42=1..}, tag=!42] add 42
 
 scoreboard players set @a lobbyWallsPlus 0
