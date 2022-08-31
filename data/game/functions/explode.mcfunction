@@ -11,8 +11,11 @@ execute as @e[tag=explosionRadius] at @s run fill ~ ~ ~ ~ ~ ~ minecraft:air repl
 execute as @e[tag=explosionRadius] at @s run fill ~ ~ ~ ~ ~ ~ minecraft:air replace minecraft:blue_stained_glass
 
 #Sound, particles
-playsound minecraft:entity.generic.explode block @a ~ ~ ~ 2 .8
+#playsound minecraft:entity.generic.explode block @a ~ ~ ~ 2 .8
 particle minecraft:explosion_emitter ~ ~ ~
+
+#Summon creeper
+summon minecraft:creeper ~ ~ ~ {Fuse:0b, NoAI:1b, Silent:1b, Invisible:1b}
 
 #Kill markers
 kill @e[tag=explosionRadius]
