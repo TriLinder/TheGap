@@ -5,6 +5,14 @@ execute as @a[scores={placedBlueWool=1..}] at @s run function game:raycast_start
 scoreboard players set @a placedRedWool 0
 scoreboard players set @a placedBlueWool 0
 
+#Detect player placing TNT
+execute as @a[scores={placedTNT=1..}] at @s run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:command_block{Command:"function game:placed_tnt",auto:1b} replace minecraft:tnt
+scoreboard players set @a placedTNT 0
+
+#Detect exploding TNT
+execute as @e[tag=placedTNT, nbt={Fuse:1s}] at @s run function game:explode
+execute as @e[tag=placedTNT, nbt={Fuse:1s}] at @s run kill @s
+
 #Respawn
 execute as @a[scores={deaths=1..}] run scoreboard players set @s killStreak 0
 execute as @a[scores={deaths=1..}] run xp set @s 0 levels

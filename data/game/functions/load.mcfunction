@@ -17,6 +17,8 @@ scoreboard objectives add game dummy
 scoreboard objectives add placedRedWool minecraft.used:minecraft.red_wool
 scoreboard objectives add placedBlueWool minecraft.used:minecraft.blue_wool
 
+scoreboard objectives add placedTNT minecraft.used:minecraft.tnt
+
 scoreboard objectives add goldBlocksMined minecraft.mined:minecraft.gold_block
 
 scoreboard objectives add standing dummy
