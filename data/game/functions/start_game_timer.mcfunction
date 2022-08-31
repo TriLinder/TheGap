@@ -12,8 +12,8 @@ title @a title ""
 gamemode adventure @a
 effect clear @a
 
-#execute as @e[tag=north_wall] at @s run spawnpoint @a ~ ~12 ~-3
-spawnpoint @a 0 0 0
+execute as @e[tag=north_wall] at @s run spawnpoint @a ~ ~12 ~-3
+#spawnpoint @a 0 0 0
 
 tp @a[team=red] 0 67 -3 0 0
 tp @a[team=blue] 0 67 3 180 0
