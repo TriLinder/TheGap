@@ -39,6 +39,7 @@ scoreboard objectives add kills playerKillCount
 scoreboard objectives add deaths deathCount
 
 scoreboard objectives add killStreak dummy
+scoreboard objectives add hasKillStreakItem dummy
 
 scoreboard objectives add playerY dummy
 scoreboard objectives add playerZ dummy
