@@ -1,6 +1,6 @@
 #Detect player building a block
-execute as @a[scores={placedRedWool=1..}] at @s run function game:raycast_start
-execute as @a[scores={placedBlueWool=1..}] at @s run function game:raycast_start
+execute as @a[scores={placedRedWool=1..}] at @s run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 minecraft:command_block{Command:"function game:placed_red_wool",auto:1b} replace minecraft:red_wool
+execute as @a[scores={placedBlueWool=1..}] at @s run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 minecraft:command_block{Command:"function game:placed_blue_wool",auto:1b} replace minecraft:blue_wool
 
 scoreboard players set @a placedRedWool 0
 scoreboard players set @a placedBlueWool 0
