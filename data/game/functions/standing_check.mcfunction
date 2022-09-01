@@ -10,5 +10,10 @@ execute unless score @s standing matches 1 if block ~ ~-1 ~ minecraft:blue_concr
 execute unless score @s standing matches 1 if block ~ ~-2 ~ minecraft:red_concrete run scoreboard players set @s standing 1
 execute unless score @s standing matches 1 if block ~ ~-2 ~ minecraft:blue_concrete run scoreboard players set @s standing 1
 
+execute if score @s standing matches 1 if block ~ ~-1 ~ minecraft:red_stained_glass run scoreboard players set @s standing 0
+execute if score @s standing matches 1 if block ~ ~-1 ~ minecraft:blue_stained_glass run scoreboard players set @s standing 0
+execute if score @s standing matches 1 if block ~ ~-2 ~ minecraft:red_stained_glass run scoreboard players set @s standing 0
+execute if score @s standing matches 1 if block ~ ~-2 ~ minecraft:blue_stained_glass run scoreboard players set @s standing 0
+
 execute if entity @s[gamemode=spectator] run scoreboard players set @s standing 0
 execute if entity @s[tag=wall] run scoreboard players set @s standing 0
