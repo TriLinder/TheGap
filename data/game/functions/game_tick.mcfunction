@@ -5,6 +5,12 @@ execute as @a[scores={placedBlueWool=1..}] at @s run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 m
 scoreboard players set @a placedRedWool 0
 scoreboard players set @a placedBlueWool 0
 
+#Detect player running out of blocks
+execute as @a[team=red] store result score @s hasRedWool run clear @s minecraft:red_wool 0
+execute as @a[team=red] if score @s hasRedWool matches ..16 run function game:give_red_wool
+execute as @a[team=blue] store result score @s hasBlueWool run clear @s minecraft:blue_wool 0
+execute as @a[team=blue] if score @s hasBlueWool matches ..16 run function game:give_blue_wool
+
 #Detect player placing TNT
 execute as @a[scores={placedTNT=1..}] at @s run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:command_block{Command:"function game:placed_tnt",auto:1b} replace minecraft:tnt
 scoreboard players set @a placedTNT 0
