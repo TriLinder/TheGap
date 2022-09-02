@@ -67,3 +67,5 @@ scoreboard objectives add startTutorial trigger
 scoreboard objectives add lobbyWallsPlus trigger
 scoreboard objectives add lobbyWallsMinus trigger
 scoreboard objectives add lobbyWalls42 trigger
+scoreboard objectives add lobbyBlocksPlus trigger
+scoreboard objectives add lobbyBlocksMinus trigger

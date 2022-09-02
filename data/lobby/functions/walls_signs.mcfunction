@@ -1,5 +1,5 @@
 #Center sign
-execute as @e[tag=wallsSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"", "clickEvent":{"action":"run_command","value":"trigger lobbyWalls42"}}',Text2:'{"text":"Walls distance:","bold":true,"color":"aqua"}',Text3:'{"score":{"name":"lobbyWallsDistance","objective":"lobby"},"bold":true,"color":"gold"}'}
+execute as @e[tag=wallsSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"", "clickEvent":{"action":"run_command","value":"trigger lobbyWalls42"}}',Text2:'{"text":"Walls distance:","bold":false,"color":"aqua"}',Text3:'{"score":{"name":"lobbyWallsDistance","objective":"lobby"},"bold":true,"color":"gold"}'}
 
 #Plus
 execute if score lobbyWallsDistance lobby matches ..79 as @e[tag=wallsPlusSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger lobbyWallsPlus"}}',Text2:'{"text":"[+]","bold":true,"color":"aqua"}'}
@@ -13,13 +13,13 @@ execute unless score lobbyWallsDistance lobby matches 16.. as @e[tag=wallsMinusS
 execute if entity @a[scores={lobbyWallsPlus=1..}] run scoreboard players add lobbyWallsDistance lobby 1
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=miniwallsRedWall] at @s run tp @s ~-0.025 ~ ~
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=miniwallsBlueWall] at @s run tp @s ~0.025 ~ ~ 
-execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a ~ ~ ~ 1 2 1
+execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ 1 2 1
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @a run trigger lobbyWallsPlus set 0
 
 execute if entity @a[scores={lobbyWallsMinus=1..}] run scoreboard players remove lobbyWallsDistance lobby 1
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsRedWall] at @s run tp @s ~0.025 ~ ~
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsBlueWall] at @s run tp @s ~-0.025 ~ ~
-execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a ~ ~ ~ 1 2 1
+execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ 1 2 1
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @a run trigger lobbyWallsMinus set 0
 
 tellraw @a[scores={lobbyWalls42=1..}, tag=!42] {"text":"???","color":"gray"}

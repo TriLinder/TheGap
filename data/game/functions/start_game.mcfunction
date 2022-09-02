@@ -3,8 +3,9 @@ title @a actionbar ""
 scoreboard players set $inLobby lobby 0
 function lobby:disable_triggers
 
-#Copy walls settings from lobby
+#Copy walls and blocksToMove settings from lobby
 scoreboard players operation wallsDistance game = lobbyWallsDistance lobby
+scoreboard players operation blocksToMove game = lobbyBlocksToMove lobby
 
 tag @a add playing
 
