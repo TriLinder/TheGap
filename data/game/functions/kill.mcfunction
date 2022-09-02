@@ -13,6 +13,6 @@ execute if score @s killStreak matches 9 if score @s hasKillStreakItem matches 1
 execute if score @s killStreak matches 10 if score @s hasKillStreakItem matches 0 run function game:give_flip_item
 execute if score @s killStreak matches 10 if score @s hasKillStreakItem matches 0 run tellraw @a ["",{"selector":"@s","color":"aqua"},{"text":" received the "},{"text":"Flip!","color":"aqua"},{"text":" Item for a killstreak of "},{"score":{"name":"@s","objective":"killStreak"},"color":"aqua"}]
 
-#Move structure
-execute if entity @s[team=red] run function game:move_south
-execute if entity @s[team=blue] run function game:move_north
+#Move structure set amount of times
+execute if entity @s[team=red] run function game:move_multiple_south
+execute if entity @s[team=blue] run function game:move_multiple_north
