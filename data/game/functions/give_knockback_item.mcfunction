@@ -1,0 +1,1 @@
+give @s stick{display:{Name:'{"text":"Knockback stick", "color":"aqua", "bold":true, "italic":false}', Lore:['{"text":"Make players fly.", "italic":false}']}, Enchantments:[{id:"minecraft:knockback",lvl:2s}], HideFlags:127}
