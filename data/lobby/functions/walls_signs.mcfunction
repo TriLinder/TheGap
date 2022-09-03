@@ -11,14 +11,14 @@ execute unless score lobbyWallsDistance lobby matches 16.. as @e[tag=wallsMinusS
 
 #Triggers
 execute if entity @a[scores={lobbyWallsPlus=1..}] run scoreboard players add lobbyWallsDistance lobby 1
-execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=miniwallsRedWall] at @s run tp @s ~-0.025 ~ ~
-execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=miniwallsBlueWall] at @s run tp @s ~0.025 ~ ~ 
+execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=miniwallsRedWall] at @s run tp @s ~ ~ ~-0.025
+execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=miniwallsBlueWall] at @s run tp @s ~ ~ ~0.025 
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ 1 2 1
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @a run trigger lobbyWallsPlus set 0
 
 execute if entity @a[scores={lobbyWallsMinus=1..}] run scoreboard players remove lobbyWallsDistance lobby 1
-execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsRedWall] at @s run tp @s ~0.025 ~ ~
-execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsBlueWall] at @s run tp @s ~-0.025 ~ ~
+execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsRedWall] at @s run tp @s ~ ~ ~0.025
+execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=miniwallsBlueWall] at @s run tp @s ~ ~ ~-0.025
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @e[tag=wallsPlusSignMarker] at @s run playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ 1 2 1
 execute if entity @a[scores={lobbyWallsMinus=1..}] as @a run trigger lobbyWallsMinus set 0
 

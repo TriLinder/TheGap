@@ -17,7 +17,7 @@ title @a times 20 100 20
 title @a subtitle ""
 title @a title ""
 
-tp @a 2048 83 0
+tp @a 2048.0 80 0 0 0
 gamemode adventure @a
 
 tag @a remove 42

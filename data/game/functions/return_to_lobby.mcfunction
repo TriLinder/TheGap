@@ -4,14 +4,15 @@ function game:destory_walls
 
 execute as @e[tag=block] at @s run fill ~-5 ~-5 ~-5 ~5 ~5 ~5 minecraft:air
 execute as @e[tag=block] run function game:destroy_block
+kill @e[type=minecraft:firework_rocket]
 
 effect clear @a
 
 worldborder set 10000
 scoreboard players set $inLobby lobby 1
 
-tp @a 2048 83 0
-spawnpoint @a 2048 83 0
+tp @a 2048.0 80 0 0 0
+spawnpoint @a 2048 80 0 0
 
 xp set @a 0 levels
 xp set @a 0 points
