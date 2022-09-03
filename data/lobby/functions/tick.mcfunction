@@ -15,6 +15,7 @@ execute as @a at @s unless block ~ 64 ~ minecraft:red_wool unless block ~ 64 ~ m
 function lobby:start_sign
 function lobby:walls_signs
 function lobby:blocks_signs
+function lobby:music_sign
 
 #Effects
 effect give @a minecraft:resistance 1000000 255 true

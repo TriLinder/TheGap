@@ -69,3 +69,21 @@ scoreboard objectives add lobbyWallsMinus trigger
 scoreboard objectives add lobbyWalls42 trigger
 scoreboard objectives add lobbyBlocksPlus trigger
 scoreboard objectives add lobbyBlocksMinus trigger
+
+scoreboard objectives add chooseMusicDisc trigger
+scoreboard objectives add musicDisc13 trigger
+scoreboard objectives add musicDiscCat trigger
+scoreboard objectives add musicDiscBlocks trigger
+scoreboard objectives add musicDiscChirp trigger
+scoreboard objectives add musicDiscFar trigger
+scoreboard objectives add musicDiscMall trigger
+scoreboard objectives add musicDiscMellohi trigger
+scoreboard objectives add musicDiscStal trigger
+scoreboard objectives add musicDiscStrad trigger
+scoreboard objectives add musicDiscWard trigger
+scoreboard objectives add musicDisc11 trigger
+scoreboard objectives add musicDiscWait trigger
+scoreboard objectives add musicDiscOtherside trigger
+scoreboard objectives add musicDisc5 trigger
+scoreboard objectives add musicDiscPigstep trigger
+scoreboard objectives add musicDiscNone trigger
