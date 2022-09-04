@@ -22,7 +22,7 @@ execute as @e[tag=placedTNT, nbt={Fuse:1s}] at @s run kill @s
 #Respawn
 execute as @a[scores={deaths=1..}] run scoreboard players set @s killStreak 0
 execute as @a[scores={deaths=1..}] run xp set @s 0 levels
-execute as @a[scores={deaths=1..}, nbt={OnGround:1b}] at @s run function game:respawn
+execute as @a[scores={deaths=1..}, nbt={OnGround:1b}] at @s if block ~ ~-1 ~ minecraft:bedrock run function game:respawn
 
 #Detect player falling in void
 execute as @a store result score @s playerY run data get entity @s Pos[1]
