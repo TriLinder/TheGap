@@ -33,6 +33,7 @@ execute if entity @a[scores={musicDiscOtherside=1..}] run scoreboard players set
 execute if entity @a[scores={musicDisc5=1..}] run scoreboard players set discToPlay lobby 13
 execute if entity @a[scores={musicDiscPigstep=1..}] run scoreboard players set discToPlay lobby 14
 execute if entity @a[scores={musicDiscNone=1..}] run scoreboard players set discToPlay lobby 99
+tp @a[scores={musicDiscExit=1..}] 2048.0 80 0 0 0
 
 scoreboard players set @a musicDisc13 0
 scoreboard players set @a musicDiscCat 0
@@ -50,6 +51,7 @@ scoreboard players set @a musicDiscOtherside 0
 scoreboard players set @a musicDisc5 0
 scoreboard players set @a musicDiscPigstep 0
 scoreboard players set @a musicDiscNone 0
+scoreboard players set @a musicDiscExit 0
 
 #Play music disc if choosen
 execute if score discToPlay lobby matches 0.. run function lobby:play_music_disc
@@ -71,6 +73,7 @@ scoreboard players enable @a[tag=musicDiscSelection] musicDiscOtherside
 scoreboard players enable @a[tag=musicDiscSelection] musicDisc5
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscPigstep
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscNone
+scoreboard players enable @a[tag=musicDiscSelection] musicDiscExit
 
 execute as @a[tag=!musicDiscSelection] run trigger musicDisc13 set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscCat set 0
@@ -88,3 +91,4 @@ execute as @a[tag=!musicDiscSelection] run trigger musicDiscOtherside set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDisc5 set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscPigstep set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscNone set 0
+execute as @a[tag=!musicDiscSelection] run trigger musicDiscExit set 0

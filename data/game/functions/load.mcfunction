@@ -87,3 +87,4 @@ scoreboard objectives add musicDiscOtherside trigger
 scoreboard objectives add musicDisc5 trigger
 scoreboard objectives add musicDiscPigstep trigger
 scoreboard objectives add musicDiscNone trigger
+scoreboard objectives add musicDiscExit trigger
