@@ -21,3 +21,5 @@ worldborder set 240
 #Wait 3 seconds for chunks to load
 title @a title "Loading.."
 schedule function game:start_game_timer 3s
+
+scoreboard players set $starting game 1

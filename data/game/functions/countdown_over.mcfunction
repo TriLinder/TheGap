@@ -6,4 +6,5 @@ execute as @a run function game:inventory
 scoreboard players set @a killStreak 0
 
 #System
+scoreboard players set $starting game 0
 scoreboard players set $inProgress game 1
