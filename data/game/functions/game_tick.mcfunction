@@ -41,3 +41,7 @@ execute if entity @a[scores={goldBlocksMined=1.., playerZ=..-1}] run function ga
 #Victory when enemy team leaves
 execute unless entity @a[tag=playing, team=red] unless score $allowEmptyGames game matches 1 run function game:blue_won
 execute unless entity @a[tag=playing, team=blue] unless score $allowEmptyGames game matches 1 if score $inProgress game matches 1 run function game:red_won
+
+#Prevent items from being dropped
+execute as @e[type=item] run data modify entity @s Owner set from entity @s Thrower
+execute as @e[type=item] run data merge entity @s {PickupDelay:0s}
