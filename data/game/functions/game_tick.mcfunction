@@ -37,3 +37,7 @@ scoreboard players set @a kills 0
 execute as @a[scores={goldBlocksMined=1..}] store result score @s playerZ run data get entity @s Pos[2]
 execute if entity @a[scores={goldBlocksMined=1.., playerZ=1..}] run function game:red_won
 execute if entity @a[scores={goldBlocksMined=1.., playerZ=..-1}] run function game:blue_won
+
+#Victory when enemy team leaves
+execute unless entity @a[tag=playing, team=red] unless score $allowEmptyGames game matches 1 run function game:blue_won
+execute unless entity @a[tag=playing, team=blue] unless score $allowEmptyGames game matches 1 if score $inProgress game matches 1 run function game:red_won
