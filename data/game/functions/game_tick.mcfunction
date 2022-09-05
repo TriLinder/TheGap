@@ -25,9 +25,9 @@ execute as @a[scores={deaths=1..}] run xp set @s 0 levels
 execute as @a[scores={deaths=1..}, nbt={OnGround:1b}] at @s if block ~ ~-1 ~ minecraft:bedrock run function game:respawn
 
 #Detect player falling in void
-execute as @a store result score @s playerY run data get entity @s Pos[1]
-execute as @a[scores={playerY=..30}] run kill @s
-scoreboard players set @a[scores={playerY=..30}] playerY 76
+execute as @a[tag=playing] store result score @s playerY run data get entity @s Pos[1]
+execute as @a[scores={playerY=..30}, tag=playing] run kill @s
+scoreboard players set @a[scores={playerY=..30}, tag=playing] playerY 76
 
 #Detect kill
 execute as @a[scores={kills=1..}] at @s run function game:kill
@@ -45,3 +45,6 @@ execute unless entity @a[tag=playing, team=blue] unless score $allowEmptyGames g
 #Prevent items from being dropped
 execute as @e[type=item] run data modify entity @s Owner set from entity @s Thrower
 execute as @e[type=item] run data merge entity @s {PickupDelay:0s}
+
+#Prevent spectators from flying away
+execute as @a[gamemode=spectator] at @s unless entity @e[distance=..150, tag=block] run tp @s @p[tag=playing]
