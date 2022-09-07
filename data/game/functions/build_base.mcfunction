@@ -101,6 +101,17 @@ setblock 0 63 -1 minecraft:red_concrete
 summon minecraft:marker 0 63 -1 {"Tags":["block", "center", "base"]}
 setblock 0 64 -6 minecraft:red_concrete
 summon minecraft:marker 0 64 -6 {"Tags":["block", "center", "base"]}
+setblock 0 64 -1 minecraft:red_concrete
+summon minecraft:marker 0 64 -1 {"Tags":["block", "center", "base"]}
+setblock 0 64 -2 minecraft:red_concrete
+summon minecraft:marker 0 64 -2 {"Tags":["block", "center", "base"]}
+setblock 0 64 -3 minecraft:red_concrete
+summon minecraft:marker 0 64 -3 {"Tags":["block", "center", "base"]}
+setblock 0 64 -4 minecraft:red_concrete
+summon minecraft:marker 0 64 -4 {"Tags":["block", "center", "base"]}
+setblock 0 64 -5 minecraft:red_concrete
+summon minecraft:marker 0 64 -5 {"Tags":["block", "center", "base"]}
+
 
 #BLUE
 setblock 1 65 6 minecraft:blue_concrete
@@ -201,6 +212,16 @@ setblock 0 63 1 minecraft:blue_concrete
 summon minecraft:marker 0 63 1 {"Tags":["block", "center", "base"]}
 setblock 0 64 6 minecraft:blue_concrete
 summon minecraft:marker 0 64 6 {"Tags":["block", "center", "base"]}
+setblock 0 64 1 minecraft:blue_concrete
+summon minecraft:marker 0 64 1 {"Tags":["block", "center", "base"]}
+setblock 0 64 2 minecraft:blue_concrete
+summon minecraft:marker 0 64 2 {"Tags":["block", "center", "base"]}
+setblock 0 64 3 minecraft:blue_concrete
+summon minecraft:marker 0 64 3 {"Tags":["block", "center", "base"]}
+setblock 0 64 4 minecraft:blue_concrete
+summon minecraft:marker 0 64 4 {"Tags":["block", "center", "base"]}
+setblock 0 64 5 minecraft:blue_concrete
+summon minecraft:marker 0 64 5 {"Tags":["block", "center", "base"]}
 
 #Middle
 setblock 1 64 0 minecraft:white_concrete
