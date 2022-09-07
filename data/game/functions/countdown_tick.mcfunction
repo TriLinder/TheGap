@@ -1,5 +1,9 @@
 scoreboard players remove $countdown game 1
 
+title @a times 0 25 0
+
+function game:countdown_tick_xp
+
 #3
 execute if score $countdown game matches 60 run title @a title {"text":"3","bold":true,"color":""}
 execute if score $countdown game matches 60 as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 100000 .1 1
