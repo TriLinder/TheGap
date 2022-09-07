@@ -1,5 +1,6 @@
 tellraw @a "Loaded!"
 
+gamerule doLimitedCrafting true
 gamerule keepInventory true
 gamerule spawnRadius 0
 
