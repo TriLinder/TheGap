@@ -1,15 +1,15 @@
 #Team choosing
-execute as @a at @s if block ~ 64 ~ minecraft:red_wool run title @s actionbar ["",{"text":"You are on the ","color":"red"},{"text":"RED","bold":true,"color":"red"},{"text":" team.","color":"red"}]
-execute as @a at @s if block ~ 64 ~ minecraft:blue_wool run title @s actionbar ["",{"text":"You are on the ","color":"blue"},{"text":"BLUE","bold":true,"color":"blue"},{"text":" team.","color":"blue"}]
+execute as @a[team=!red] at @s if block ~ 64 ~ minecraft:red_wool run team join red
+execute as @a[team=!blue] at @s if block ~ 64 ~ minecraft:blue_wool run team join blue
+execute as @a at @s unless block ~ 64 ~ minecraft:red_wool unless block ~ 64 ~ minecraft:blue_wool run team leave @s
+
+title @a[team=red] actionbar ["",{"text":"You are on the ","color":"red"},{"text":"RED","bold":true,"color":"red"},{"text":" team.","color":"red"}]
+title @a[team=blue] actionbar ["",{"text":"You are on the ","color":"blue"},{"text":"BLUE","bold":true,"color":"blue"},{"text":" team.","color":"blue"}]
 execute as @a at @s unless block ~ 64 ~ minecraft:red_wool unless block ~ 64 ~ minecraft:blue_wool run title @a actionbar ""
 
-execute as @a at @s if block ~ 64 ~ minecraft:red_wool run effect give @s minecraft:glowing 10000 255 true
-execute as @a at @s if block ~ 64 ~ minecraft:blue_wool run effect give @s minecraft:glowing 10000 255 true
+effect give @a[team=red] minecraft:glowing 10000 255 true
+effect give @a[team=blue] minecraft:glowing 10000 255 true
 execute as @a at @s unless block ~ 64 ~ minecraft:red_wool unless block ~ 64 ~ minecraft:blue_wool run effect clear @s minecraft:glowing
-
-execute as @a at @s if block ~ 64 ~ minecraft:red_wool run team join red
-execute as @a at @s if block ~ 64 ~ minecraft:blue_wool run team join blue
-execute as @a at @s unless block ~ 64 ~ minecraft:red_wool unless block ~ 64 ~ minecraft:blue_wool run team leave @s
 
 #Signs
 function lobby:start_sign
