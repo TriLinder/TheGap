@@ -11,11 +11,11 @@ execute unless score lobbyBlocksToMove lobby matches 2.. as @e[tag=blocksMinusMa
 
 #Triggers
 execute if entity @a[scores={lobbyBlocksPlus=1..}] run scoreboard players add lobbyBlocksToMove lobby 1
-execute if entity @a[scores={lobbyBlocksPlus=1..}] as @e[tag=blocksPlusMarker] at @s run playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ 1 2 1
+execute if entity @a[scores={lobbyBlocksPlus=1..}] as @e[tag=blocksPlusMarker] at @s run playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ .1 2 1
 execute if entity @a[scores={lobbyWallsPlus=1..}] as @a run trigger lobbyWallsPlus set 0
 
 execute if entity @a[scores={lobbyBlocksMinus=1..}] run scoreboard players remove lobbyBlocksToMove lobby 1
-execute if entity @a[scores={lobbyBlocksMinus=1..}] as @e[tag=blocksMinusMarker] at @s run playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ 1 2 1
+execute if entity @a[scores={lobbyBlocksMinus=1..}] as @e[tag=blocksMinusMarker] at @s run playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ .1 2 1
 execute if entity @a[scores={lobbyBlocksMinus=1..}] as @a run trigger lobbyBlocksMinus set 0
 
 scoreboard players set @a lobbyBlocksPlus 0
