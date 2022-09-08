@@ -20,6 +20,9 @@
 #Teleport away all selecting players
 tp @a[tag=musicDiscSelection] 2048.0 80 0 0 0
 
+#Stop Minecraft music
+stopsound @a music
+
 #Stop all playing music discs
 stopsound @a * minecraft:music_disc.13
 stopsound @a * minecraft:music_disc.cat
