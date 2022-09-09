@@ -3,8 +3,9 @@
 #Kill marker entity if block no longer present
 execute as @e[tag=block] at @s if block ~ ~ ~ air run kill @s
 
-#Find blocks not connected to base
-function game:find_connected
+#Find blocks not connected to, set all blocks as connected if in tutorial
+execute if score $timer tutorial matches -1 run function game:find_connected
+execute unless score $timer tutorial matches -1 run tag @e[tag=block] add connectedBlock
 
 #Check if there's a block near the north border
 scoreboard players set canMove game 1
