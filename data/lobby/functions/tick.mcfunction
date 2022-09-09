@@ -17,13 +17,9 @@ function lobby:walls_signs
 function lobby:blocks_signs
 function lobby:music_sign
 function lobby:link_sign
+function lobby:tutorial_sign
 
 #Effects
 effect give @a minecraft:resistance 1000000 255 true
 effect give @a minecraft:regeneration 1000000 255 true
 effect give @a minecraft:saturation 1000000 255 true
-
-#Triggers
-scoreboard players enable @a startTutorial
-execute if entity @a[scores={startTutorial=1..}] run function tutorial:start
-scoreboard players set @a startTutorial 0
