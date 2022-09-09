@@ -16,6 +16,7 @@ function lobby:start_sign
 function lobby:walls_signs
 function lobby:blocks_signs
 function lobby:music_sign
+function lobby:link_sign
 
 #Effects
 effect give @a minecraft:resistance 1000000 255 true

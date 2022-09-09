@@ -70,6 +70,7 @@ scoreboard objectives add lobbyWallsMinus trigger
 scoreboard objectives add lobbyWalls42 trigger
 scoreboard objectives add lobbyBlocksPlus trigger
 scoreboard objectives add lobbyBlocksMinus trigger
+scoreboard objectives add linkSign trigger
 
 scoreboard objectives add chooseMusicDisc trigger
 scoreboard objectives add musicDisc13 trigger
