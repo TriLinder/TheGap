@@ -17,6 +17,7 @@ function lobby:walls_signs
 function lobby:blocks_signs
 function lobby:music_sign
 function lobby:link_sign
+function lobby:trailer_sign
 function lobby:tutorial_sign
 
 #Effects

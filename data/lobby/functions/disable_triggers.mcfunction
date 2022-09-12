@@ -8,6 +8,7 @@ execute as @a run trigger lobbyBlocksPlus set 0
 execute as @a run trigger lobbyBlocksMinus set 0
 execute as @a run trigger chooseMusicDisc set 0
 execute as @a run trigger linkSign set 0
+execute as @a run trigger trailerSign set 0
 
 #Stop music discs
 scoreboard players set discToPlay lobby 99
