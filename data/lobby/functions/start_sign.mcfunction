@@ -33,7 +33,7 @@ execute if score startSignState lobby matches 3 as @e[tag=startSignMarker] at @s
 
 #Triggers
 execute as @a[scores={startSignClick=1..}] if score startSignState lobby matches 0 run tellraw @s {"text":"Two or more players are required to start the game.","color":"aqua"}
-execute as @a[scores={startSignClick=1..}] if score startSignState lobby matches 1 run tellraw @s {"text":"All players must choose their teams by standing on the wool.","color":"aqua"}
+execute as @a[scores={startSignClick=1..}] if score startSignState lobby matches 1 run tellraw @s {"text":"All players must choose their team by standing on the wool.","color":"aqua"}
 execute as @a[scores={startSignClick=1..}] if score startSignState lobby matches 2 run tellraw @s {"text":"Teams can't be empty.","color":"aqua"}
 execute as @a[scores={startSignClick=1..}] if score startSignState lobby matches 3 run function game:start_game
 
