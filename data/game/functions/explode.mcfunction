@@ -1,4 +1,4 @@
-# -- Replace all stained glass in radius of 4, simulate an explosion
+# -- Replace all stained glass and wool in radius of 4, simulate an explosion
 
 #Summon markers
 kill @e[tag=explosionRadius]
