@@ -2,7 +2,7 @@
 execute as @e[tag=musicSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger chooseMusicDisc"}}',Text2:'{"text":"Click to","color":"aqua"}',Text3:'{"text":"play music","color":"aqua"}'}
 
 #Teleport sign triggers
-execute as @a[scores={chooseMusicDisc=1..}] run tp @s 2056.0 81 -12.0 180 0
+execute as @a[scores={chooseMusicDisc=1..}] run tp @s 2057.0 81 -12.0 180 0
 
 scoreboard players set @a chooseMusicDisc 0
 scoreboard players enable @a chooseMusicDisc
@@ -32,6 +32,7 @@ execute if entity @a[scores={musicDiscWait=1..}] run scoreboard players set disc
 execute if entity @a[scores={musicDiscOtherside=1..}] run scoreboard players set discToPlay lobby 12
 execute if entity @a[scores={musicDisc5=1..}] run scoreboard players set discToPlay lobby 13
 execute if entity @a[scores={musicDiscPigstep=1..}] run scoreboard players set discToPlay lobby 14
+execute if entity @a[scores={musicDiscRelic=1..}] run scoreboard players set discToPlay lobby 15
 execute if entity @a[scores={musicDiscNone=1..}] run scoreboard players set discToPlay lobby 99
 tp @a[scores={musicDiscExit=1..}] 2048.0 80 0 0 0
 
@@ -50,6 +51,7 @@ scoreboard players set @a musicDiscWait 0
 scoreboard players set @a musicDiscOtherside 0
 scoreboard players set @a musicDisc5 0
 scoreboard players set @a musicDiscPigstep 0
+scoreboard players set @a musicDiscRelic 0
 scoreboard players set @a musicDiscNone 0
 scoreboard players set @a musicDiscExit 0
 
@@ -72,6 +74,7 @@ scoreboard players enable @a[tag=musicDiscSelection] musicDiscWait
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscOtherside
 scoreboard players enable @a[tag=musicDiscSelection] musicDisc5
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscPigstep
+scoreboard players enable @a[tag=musicDiscSelection] musicDiscRelic
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscNone
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscExit
 
@@ -90,5 +93,6 @@ execute as @a[tag=!musicDiscSelection] run trigger musicDiscWait set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscOtherside set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDisc5 set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscPigstep set 0
+execute as @a[tag=!musicDiscSelection] run trigger musicDiscRelic set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscNone set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscExit set 0
