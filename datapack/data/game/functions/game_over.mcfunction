@@ -5,10 +5,10 @@ scoreboard players set @a goldBlocksMined 0
 execute as @a[tag=winner] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 10000 2 1
 execute as @a[tag=loser] at @s run playsound minecraft:block.anvil.place master @s ~ ~ ~ 10000 1 1
 
-effect give @a[tag=winner] minecraft:glowing 1000000 255 true
+effect give @a[tag=winner] minecraft:glowing infinite 255 true
 
-effect give @a minecraft:regeneration 100000 255 true
-effect give @a minecraft:resistance 100000 255 true
+effect give @a minecraft:regeneration infinite 255 true
+effect give @a minecraft:resistance infinite 255 true
 
 kill @e[type=item]
 clear @a
