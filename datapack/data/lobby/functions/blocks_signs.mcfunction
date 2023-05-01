@@ -1,13 +1,13 @@
 #Center sign
-execute as @e[tag=blocksSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"", "clickEvent":{"action":"run_command","value":""}}',Text2:'{"text":"Blocks to move:","bold":false,"color":"aqua"}',Text3:'{"score":{"name":"lobbyBlocksToMove","objective":"lobby"},"bold":true,"color":"gold"}'}
+execute as @e[tag=blocksSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":""},"text":""}','{"bold":false,"color":"aqua","text":"Blocks to move:"}','{"score":{"name":"lobbyBlocksToMove","objective":"lobby"},"bold":true,"color":"gold"}','{"text":""}']},is_waxed:0b}
 
 #Plus
-execute if score lobbyBlocksToMove lobby matches ..11 as @e[tag=blocksPlusMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger lobbyBlocksPlus"}}',Text2:'{"text":"[+]","bold":true,"color":"aqua"}'}
-execute unless score lobbyBlocksToMove lobby matches ..11 as @e[tag=blocksPlusMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":""}',Text2:'{"text":"[+]","bold":true,"color":"dark_gray"}'}
+execute if score lobbyBlocksToMove lobby matches ..11 as @e[tag=blocksPlusMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyBlocksPlus"},"text":""}','{"bold":true,"color":"aqua","text":"[+]"}','{"text":""}','{"text":""}']},is_waxed:0b}
+execute unless score lobbyBlocksToMove lobby matches ..11 as @e[tag=blocksPlusMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyBlocksPlus"},"text":""}','{"bold":true,"color":"dark_gray","text":"[+]"}','{"text":""}','{"text":""}']},is_waxed:0b}
 
 #Minus
-execute if score lobbyBlocksToMove lobby matches 2.. as @e[tag=blocksMinusMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger lobbyBlocksMinus"}}',Text2:'{"text":"[-]","bold":true,"color":"aqua"}'}
-execute unless score lobbyBlocksToMove lobby matches 2.. as @e[tag=blocksMinusMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":""}',Text2:'{"text":"[-]","bold":true,"color":"dark_gray"}'}
+execute if score lobbyBlocksToMove lobby matches 2.. as @e[tag=blocksMinusMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyBlocksMinus"},"text":""}','{"bold":true,"color":"aqua","text":"[-]"}','{"text":""}','{"text":""}']},is_waxed:0b}
+execute unless score lobbyBlocksToMove lobby matches 2.. as @e[tag=blocksMinusMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyBlocksMinus"},"text":""}','{"bold":true,"color":"dark_gray","text":"[-]"}','{"text":""}','{"text":""}']},is_waxed:0b}
 
 #Triggers
 execute if entity @a[scores={lobbyBlocksPlus=1..}] run scoreboard players add lobbyBlocksToMove lobby 1

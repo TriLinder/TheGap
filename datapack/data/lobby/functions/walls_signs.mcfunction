@@ -1,13 +1,13 @@
 #Center sign
-execute as @e[tag=wallsSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"", "clickEvent":{"action":"run_command","value":"trigger lobbyWalls42"}}',Text2:'{"text":"Walls distance:","bold":false,"color":"aqua"}',Text3:'{"score":{"name":"lobbyWallsDistance","objective":"lobby"},"bold":true,"color":"gold"}'}
+execute as @e[tag=wallsSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyWalls42"},"text":""}','{"bold":false,"color":"aqua","text":"Walls distance:"}','{"score":{"name":"lobbyWallsDistance","objective":"lobby"},"bold":true,"color":"gold"}','{"text":""}']},is_waxed:0b}
 
 #Plus
-execute if score lobbyWallsDistance lobby matches ..79 as @e[tag=wallsPlusSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger lobbyWallsPlus"}}',Text2:'{"text":"[+]","bold":true,"color":"aqua"}'}
-execute unless score lobbyWallsDistance lobby matches ..79 as @e[tag=wallsPlusSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":""}',Text2:'{"text":"[+]","bold":true,"color":"dark_gray"}'}
+execute if score lobbyWallsDistance lobby matches ..79 as @e[tag=wallsPlusSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyWallsPlus"},"text":""}','{"bold":true,"color":"aqua","text":"[+]"}','{"text":""}','{"text":""}']},is_waxed:0b}
+execute unless score lobbyWallsDistance lobby matches ..79 as @e[tag=wallsPlusSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyWallsPlus"},"text":""}','{"bold":true,"color":"dark_gray","text":"[+]"}','{"text":""}','{"text":""}']},is_waxed:0b}
 
 #Minus
-execute if score lobbyWallsDistance lobby matches 16.. as @e[tag=wallsMinusSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger lobbyWallsMinus"}}',Text2:'{"text":"[-]","bold":true,"color":"aqua"}'}
-execute unless score lobbyWallsDistance lobby matches 16.. as @e[tag=wallsMinusSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":""}',Text2:'{"text":"[-]","bold":true,"color":"dark_gray"}'}
+execute if score lobbyWallsDistance lobby matches 16.. as @e[tag=wallsMinusSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyWallsMinus"},"text":""}','{"bold":true,"color":"aqua","text":"[-]"}','{"text":""}','{"text":""}']},is_waxed:0b}
+execute unless score lobbyWallsDistance lobby matches 16.. as @e[tag=wallsMinusSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyWallsMinus"},"text":""}','{"bold":true,"color":"dark_gray","text":"[-]"}','{"text":""}','{"text":""}']},is_waxed:0b}
 
 #Triggers
 execute if entity @a[scores={lobbyWallsPlus=1..}] run scoreboard players add lobbyWallsDistance lobby 1

@@ -1,5 +1,5 @@
 #Set sign text
-execute as @e[tag=tutorialSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger startTutorial"}}',Text2:'{"text":"Click for a","color":"aqua"}',Text3:'{"text":"map showcase","color":"aqua"}'}
+execute as @e[tag=tutorialSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger startTutorial"},"text":""}','{"color":"aqua","text":"Click for a"}','{"color":"aqua","text":"map showcase"}','{"text":""}']},is_waxed:0b}
 
 #Triggers
 scoreboard players enable @a startTutorial

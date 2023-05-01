@@ -1,14 +1,11 @@
 #Teleport sign
-execute as @e[tag=musicSignMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger chooseMusicDisc"}}',Text2:'{"text":"Click to","color":"aqua"}',Text3:'{"text":"play music","color":"aqua"}'}
+execute as @e[tag=musicSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger chooseMusicDisc"},"text":""}','{"color":"aqua","text":"Click to"}','{"color":"aqua","text":"play music"}','{"text":""}']},is_waxed:0b}
 
 #Teleport sign triggers
 execute as @a[scores={chooseMusicDisc=1..}] run tp @s 2057.0 81 -12.0 180 0
 
 scoreboard players set @a chooseMusicDisc 0
 scoreboard players enable @a chooseMusicDisc
-
-#Music disc signs
-execute as @e[tag=musicDiscMarker] at @s run data merge block ~ ~ ~ {Text1:'{"text":"Play!","bold":false,"color":"aqua"}'}
 
 #Set player tags
 execute as @a[tag=!musicDiscSelection] at @s if block ~ 64 ~ minecraft:yellow_wool run tag @s add musicDiscSelection
