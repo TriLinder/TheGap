@@ -1,5 +1,5 @@
 #Center sign
-execute as @e[tag=wallsSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyWalls42"},"text":""}','{"bold":false,"color":"aqua","text":"Walls distance:"}','{"score":{"name":"lobbyWallsDistance","objective":"lobby"},"bold":true,"color":"gold"}','{"text":""}']},is_waxed:0b}
+execute as @e[tag=wallsSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyWalls42"},"text":""}','{"bold":false,"color":"aqua","text":"Gap width:"}','{"score":{"name":"lobbyWallsDistance","objective":"lobby"},"bold":true,"color":"gold"}','{"text":""}']},is_waxed:0b}
 
 #Plus
 execute if score lobbyWallsDistance lobby matches ..79 as @e[tag=wallsPlusSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger lobbyWallsPlus"},"text":""}','{"bold":true,"color":"aqua","text":"[+]"}','{"text":""}','{"text":""}']},is_waxed:0b}
