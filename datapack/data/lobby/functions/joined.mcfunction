@@ -25,8 +25,8 @@ execute if score $starting game matches 1 run gamemode spectator @s
 
 execute if score $timer tutorial matches -2 run gamemode spectator @s
 execute if score $timer tutorial matches 0.. run gamemode spectator @s 
-execute if score $timer tutorial matches -2 run effect give @s minecraft:slowness 100000 255 true
-execute if score $timer tutorial matches 0.. run effect give @s minecraft:slowness 100000 255 true
+execute if score $timer tutorial matches -2 run effect give @s minecraft:slowness infinite 255 true
+execute if score $timer tutorial matches 0.. run effect give @s minecraft:slowness infinite 255 true
 
 tag @s remove playing
 team leave @s

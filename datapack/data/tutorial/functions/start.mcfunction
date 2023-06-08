@@ -1,6 +1,6 @@
-effect give @a minecraft:slowness 1000000 255 true
-effect give @a minecraft:blindness 1000000 255 true
-effect give @a minecraft:darkness 1000000 255 true
+effect give @a minecraft:slowness infinite 255 true
+effect give @a minecraft:blindness infinite 255 true
+effect give @a minecraft:darkness infinite 255 true
 gamemode spectator @a
 
 #No longer in lobby
