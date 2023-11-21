@@ -31,7 +31,7 @@ scoreboard players set @a[scores={playerY=..30}, tag=playing] playerY 76
 
 #Detect kill
 execute as @a[scores={kills=1..}] at @s run function game:kill
-scoreboard players set @a kills 0
+scoreboard players remove @a[scores={kills=1..}] kills 1
 
 #Detect victory
 execute as @a[scores={goldBlocksMined=1..}] store result score @s playerZ run data get entity @s Pos[2]
