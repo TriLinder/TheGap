@@ -16,8 +16,8 @@ execute as @a[scores={placedTNT=1..}] at @s run fill ~-10 ~-10 ~-10 ~10 ~10 ~10 
 scoreboard players set @a placedTNT 0
 
 #Detect exploding TNT
-execute as @e[tag=placedTNT, nbt={Fuse:1s}] at @s run function game:explode
-execute as @e[tag=placedTNT, nbt={Fuse:1s}] at @s run kill @s
+execute as @e[tag=placedTNT, nbt={fuse:1s}] at @s run function game:explode
+execute as @e[tag=placedTNT, nbt={fuse:1s}] at @s run kill @s
 
 #Respawn
 execute as @a[scores={deaths=1..}] run scoreboard players set @s killStreak 0
