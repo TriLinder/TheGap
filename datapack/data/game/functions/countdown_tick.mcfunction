@@ -1,6 +1,7 @@
 scoreboard players remove $countdown game 1
 
 title @a times 0 25 0
+title @a subtitle ""
 
 function game:countdown_tick_xp
 
