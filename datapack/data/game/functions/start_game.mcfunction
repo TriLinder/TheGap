@@ -19,7 +19,8 @@ effect give @a minecraft:darkness infinite 255 true
 worldborder set 240
 
 #Wait 3 seconds for chunks to load
-title @a title "Loading.."
+title @a subtitle "for the chunks to load."
+title @a title "Please wait.."
 schedule function game:start_game_timer 3s
 
 scoreboard players set $starting game 1
