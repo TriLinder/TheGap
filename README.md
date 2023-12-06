@@ -12,4 +12,4 @@ You can however [download](https://github.com/TriLinder/TheGap/releases/latest/d
 
 
 
-Made for Minecraft version 1.19
+Made for Minecraft version 1.20.3
