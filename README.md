@@ -9,7 +9,3 @@ You can watch the video trailer [here](https://www.youtube.com/watch?v=opldnz5Xd
 This repository is for the data pack used in The Gap, and doesn't work on its own.
 
 You can however [download](https://github.com/TriLinder/TheGap/releases/latest/download/TheGap.zip) the full map under the releases tab.
-
-
-
-Made for Minecraft version 1.20.3
