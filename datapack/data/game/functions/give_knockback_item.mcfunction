@@ -1,1 +1,1 @@
-give @s stick{display:{Name:'{"text":"Knockback stick", "color":"aqua", "bold":true, "italic":false}', Lore:['{"text":"Make players fly.", "italic":false}']}, Enchantments:[{id:"minecraft:knockback",lvl:2s}], HideFlags:127}
+give @s minecraft:stick[custom_name='{"bold":true,"color":"aqua","italic":false,"text":"Knockback stick"}',lore=['{"italic":false,"text":"Make players fly."}'],enchantments={levels:{"minecraft:knockback":2},show_in_tooltip:false},hide_additional_tooltip={}] 1

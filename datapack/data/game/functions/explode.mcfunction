@@ -18,7 +18,7 @@ execute as @e[tag=explosionRadius] at @s run fill ~ ~ ~ ~ ~ ~ minecraft:air repl
 particle minecraft:explosion_emitter ~ ~ ~
 
 #Summon creeper
-summon minecraft:creeper ~ ~ ~ {Fuse:0b, NoAI:1b, Silent:1b, Invisible:1b}
+summon minecraft:creeper ~ ~ ~ {Fuse:0s, NoAI:1b, Silent:1b, Invisible:1b}
 
 #Kill markers
 kill @e[tag=explosionRadius]

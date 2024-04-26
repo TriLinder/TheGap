@@ -13,7 +13,7 @@ effect give @a minecraft:resistance infinite 255 true
 kill @e[type=item]
 clear @a
 
-give @a[tag=winner] minecraft:firework_rocket{HideFlags:127, Fireworks:{Explosions:[{Type:1,Trail:1,Colors:[I;4312372,14602026],FadeColors:[I;4312372,14602026,15435844,15790320]}],Flight:1}, CanPlaceOn:["minecraft:gold_block", "minecraft:blue_stained_glass", "minecraft:red_stained_glass", "minecraft:red_wool", "minecraft:blue_wool", "minecraft:red_concrete", "minecraft:blue_concrete", "minecraft:white_concrete", "minecraft:bedrock"]} 2304
+give @a[tag=winner] minecraft:firework_rocket[can_place_on={predicates:[{blocks:"minecraft:gold_block"},{blocks:"minecraft:blue_stained_glass"},{blocks:"minecraft:red_stained_glass"},{blocks:"minecraft:red_wool"},{blocks:"minecraft:blue_wool"},{blocks:"minecraft:red_concrete"},{blocks:"minecraft:blue_concrete"},{blocks:"minecraft:white_concrete"},{blocks:"minecraft:bedrock"}],show_in_tooltip:false},hide_additional_tooltip={},fireworks={flight_duration:1,explosions:[{shape:"large_ball",has_trail:true,colors:[I;4312372,14602026],fade_colors:[I;4312372,14602026,15435844,15790320]}]}] 2304
 team leave @a
 
 scoreboard players set $gameOverTime game 0
