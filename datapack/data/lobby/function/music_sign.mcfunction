@@ -2,7 +2,7 @@
 execute as @e[tag=musicSignMarker] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger chooseMusicDisc"},"text":""}','{"color":"aqua","text":"Click to"}','{"color":"aqua","text":"play music"}','{"text":""}']},is_waxed:0b}
 
 #Teleport sign triggers
-execute as @a[scores={chooseMusicDisc=1..}] run tp @s 2057.0 81 -12.0 180 0
+execute as @a[scores={chooseMusicDisc=1..}] run tp @s 2058.5 81 -12.0 180 0
 
 scoreboard players set @a chooseMusicDisc 0
 scoreboard players enable @a chooseMusicDisc
@@ -30,6 +30,9 @@ execute if entity @a[scores={musicDiscOtherside=1..}] run scoreboard players set
 execute if entity @a[scores={musicDisc5=1..}] run scoreboard players set discToPlay lobby 13
 execute if entity @a[scores={musicDiscPigstep=1..}] run scoreboard players set discToPlay lobby 14
 execute if entity @a[scores={musicDiscRelic=1..}] run scoreboard players set discToPlay lobby 15
+execute if entity @a[scores={musicDiscCreator=1..}] run scoreboard players set discToPlay lobby 16
+execute if entity @a[scores={musicDiscCreatorMusicBox=1..}] run scoreboard players set discToPlay lobby 17
+execute if entity @a[scores={musicDiscPrecipice=1..}] run scoreboard players set discToPlay lobby 18
 execute if entity @a[scores={musicDiscNone=1..}] run scoreboard players set discToPlay lobby 99
 tp @a[scores={musicDiscExit=1..}] 2048.0 80 0 0 0
 
@@ -49,6 +52,9 @@ scoreboard players set @a musicDiscOtherside 0
 scoreboard players set @a musicDisc5 0
 scoreboard players set @a musicDiscPigstep 0
 scoreboard players set @a musicDiscRelic 0
+scoreboard players set @a musicDiscCreator 0
+scoreboard players set @a musicDiscCreatorMusicBox 0
+scoreboard players set @a musicDiscPrecipice 0
 scoreboard players set @a musicDiscNone 0
 scoreboard players set @a musicDiscExit 0
 
@@ -72,6 +78,9 @@ scoreboard players enable @a[tag=musicDiscSelection] musicDiscOtherside
 scoreboard players enable @a[tag=musicDiscSelection] musicDisc5
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscPigstep
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscRelic
+scoreboard players enable @a[tag=musicDiscSelection] musicDiscCreator
+scoreboard players enable @a[tag=musicDiscSelection] musicDiscCreatorMusicBox
+scoreboard players enable @a[tag=musicDiscSelection] musicDiscPrecipice
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscNone
 scoreboard players enable @a[tag=musicDiscSelection] musicDiscExit
 
@@ -91,5 +100,8 @@ execute as @a[tag=!musicDiscSelection] run trigger musicDiscOtherside set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDisc5 set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscPigstep set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscRelic set 0
+execute as @a[tag=!musicDiscSelection] run trigger musicDiscCreator set 0
+execute as @a[tag=!musicDiscSelection] run trigger musicDiscCreatorMusicBox set 0
+execute as @a[tag=!musicDiscSelection] run trigger musicDiscPrecipice set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscNone set 0
 execute as @a[tag=!musicDiscSelection] run trigger musicDiscExit set 0
