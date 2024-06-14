@@ -16,6 +16,9 @@
 #   13 = 5
 #   14 = Pigstep
 #   15 = Relic
+#   16 = Creator
+#   17 = Creator (Music Box)
+#   18 = Precipice
 #   99 = Stop playing current music disc
 
 #Teleport away all selecting players
@@ -41,6 +44,9 @@ stopsound @a * minecraft:music_disc.otherside
 stopsound @a * minecraft:music_disc.5
 stopsound @a * minecraft:music_disc.pigstep
 stopsound @a * minecraft:music_disc.relic
+stopsound @a * minecraft:music_disc.creator
+stopsound @a * minecraft:music_disc.creator_music_box
+stopsound @a * minecraft:music_disc.precipice
 
 #Play music disc
 execute if score discToPlay lobby matches 0 as @e[tag=musicDiscSoundOrigin] at @s run playsound minecraft:music_disc.13 record @a 2048.0 80 -4 1000 1 1
@@ -59,6 +65,9 @@ execute if score discToPlay lobby matches 12 as @e[tag=musicDiscSoundOrigin] at 
 execute if score discToPlay lobby matches 13 as @e[tag=musicDiscSoundOrigin] at @s run playsound minecraft:music_disc.5 record @a 2048.0 80 -4 1000 1 1
 execute if score discToPlay lobby matches 14 as @e[tag=musicDiscSoundOrigin] at @s run playsound minecraft:music_disc.pigstep record @a 2048.0 80 -4 1000 1 1
 execute if score discToPlay lobby matches 15 as @e[tag=musicDiscSoundOrigin] at @s run playsound minecraft:music_disc.relic record @a 2048.0 80 -4 1000 1 1
+execute if score discToPlay lobby matches 16 as @e[tag=musicDiscSoundOrigin] at @s run playsound minecraft:music_disc.creator record @a 2048.0 80 -4 1000 1 1
+execute if score discToPlay lobby matches 17 as @e[tag=musicDiscSoundOrigin] at @s run playsound minecraft:music_disc.creator_music_box record @a 2048.0 80 -4 1000 1 1
+execute if score discToPlay lobby matches 18 as @e[tag=musicDiscSoundOrigin] at @s run playsound minecraft:music_disc.precipice record @a 2048.0 80 -4 1000 1 1
 
 #Reset discToPlay to prevent looping
 scoreboard players set discToPlay lobby -1
